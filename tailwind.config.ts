@@ -23,6 +23,11 @@ const config: Config = {
       semiblack: '#37352F',
       grey: '#AAA',
     },
+
+    listStyleType: {
+      disc: 'disc',
+      square: 'square',
+    },
   },
   plugins: [],
 };
