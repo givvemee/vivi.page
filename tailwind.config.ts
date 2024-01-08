@@ -21,7 +21,9 @@ const config: Config = {
       normal: '#787774',
       subnormal: '#F1F1EF',
       semiblack: '#37352F',
-      grey: '#AAA',
+      grey: '#CCC',
+      white: '#FFF',
+      black: '#000',
     },
 
     listStyleType: {
@@ -30,5 +32,6 @@ const config: Config = {
     },
   },
   plugins: [],
+  darkMode: 'class',
 };
 export default config;

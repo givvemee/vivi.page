@@ -55,21 +55,21 @@ const Resume = () => {
             <span className="text-main">Portfolio</span>
           </div>
           <div
-            className="bg-normal py-5 px-4 rounded-sm cursor-pointer font-bold flex items-center gap-4"
+            className="bg-grey py-5 px-4 rounded-sm cursor-pointer font-bold flex items-center gap-4 text-main"
             onClick={util.Github}
           >
             <Github />
             <span>Github</span>
           </div>
           <div
-            className="bg-normal py-5 px-4 rounded-sm cursor-pointer font-bold flex items-center gap-4 "
+            className="bg-grey py-5 px-4 rounded-sm cursor-pointer font-bold flex items-center gap-4 text-main"
             onClick={util.Medium}
           >
             <Pen />
             <span>Medium</span>
           </div>
           <div
-            className="bg-normal py-5 px-4 rounded-sm cursor-pointer font-bold flex items-center gap-4"
+            className="bg-grey py-5 px-4 rounded-sm cursor-pointer font-bold flex items-center gap-4 text-main"
             onClick={util.LinkendIn}
           >
             <LinkedIn />
@@ -170,9 +170,7 @@ const Resume = () => {
         <div className="mb-7">
           <div>
             <div className="bg-sub">
-              <p className="text-normal py-0.5 pl-2 font-bold mb-2">
-                Code Philosophy
-              </p>
+              <p className="py-0.5 pl-2 font-bold mb-2">Code Philosophy</p>
             </div>
             <span className="text-normal">
               항상 정답인 해결방안이 있을 거라고 생각하지 않습니다. 최적의
@@ -190,7 +188,7 @@ const Resume = () => {
         <div className="mb-7">
           <div>
             <div className="bg-sub">
-              <p className="text-normal py-0.5 pl-2 font-bold mb-2">
+              <p className="py-0.5 pl-2 font-bold mb-2">
                 React & Next.js Mastery
               </p>
             </div>
@@ -206,7 +204,7 @@ const Resume = () => {
         <div className="mb-7">
           <div>
             <div className="bg-sub">
-              <p className="text-normal py-0.5 pl-2 font-bold mb-2">
+              <p className="py-0.5 pl-2 font-bold mb-2">
                 Typescript Proficiency
               </p>
             </div>
@@ -220,7 +218,7 @@ const Resume = () => {
         <div className="mb-7">
           <div>
             <div className="bg-sub">
-              <p className="text-normal py-0.5 pl-2 font-bold mb-2">
+              <p className="py-0.5 pl-2 font-bold mb-2">
                 Effective Communication
               </p>
             </div>
@@ -241,9 +239,7 @@ const Resume = () => {
         <div className="mb-7">
           <div>
             <div className="bg-sub">
-              <p className="text-normal py-0.5 pl-2 font-bold mb-2">
-                Web Expertise
-              </p>
+              <p className="py-0.5 pl-2 font-bold mb-2">Web Expertise</p>
             </div>
             <span className="text-normal">
               내가 개발한 사이트는 유저 중심으로 구성되어야 한다는 철학을 가지고
@@ -265,7 +261,7 @@ const Resume = () => {
               <p className="text-normal">2022. 03 - </p>
             </div>
             <div>
-              <p className="text-grey font-bold mb-2">방송통신대학교</p>
+              <p className="mb-2">방송통신대학교</p>
               <p className="text-normal leading-6">컴퓨터과학과</p>
             </div>
           </div>
@@ -274,7 +270,7 @@ const Resume = () => {
               <p className="text-normal">2014. 03 - 2020. 02</p>
             </div>
             <div className="w-full">
-              <p className="text-grey font-bold mb-2">동덕여자대학교</p>
+              <p className="font-bold mb-2">동덕여자대학교</p>
               <p className="text-normal leading-6">독일어과</p>
             </div>
           </div>
