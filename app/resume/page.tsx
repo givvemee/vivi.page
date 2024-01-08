@@ -1,9 +1,16 @@
+'use client';
+
+import * as util from '@/app/util/index';
+import { Github } from '../icon/github';
+import { Lightbulb } from '../icon/ligbtbulb';
+import { LinkedIn } from '../icon/linkedIn';
+import { Pen } from '../icon/pen';
 import { MelhoProject, MelhoStack, OnuiiProject, OnuiiStack } from './list';
 
 const Resume = () => {
   return (
     <div className="w-full max-w-3xl border-white mx-auto my-10">
-      <p className="text-5xl font-700 mt-3 mb-3">Gibbeum Yoon</p>
+      <p className="text-5xl font-800 mt-3 mb-3">Gibbeum Yoon</p>
       <p className="mb-3">Web Frontend Developer</p>
 
       <div className="mt-12">
@@ -33,27 +40,40 @@ const Resume = () => {
       <div className="mt-16">
         <p className="text-main text-3xl font-bold mb-5">Contact me</p>
         <div className="flex justify-between">
-          <div>
+          <div onClick={util.SendEmail} className="cursor-pointer">
             <p className="mb-1">Email address</p>
             <p className="text-normal">givvemeee@gmail.com</p>
           </div>
-          <div>
+          <div onClick={util.PhoneCall} className="cursor-pointer">
             <p className="mb-1">Phone number</p>
-            <p className="text-normal">+821073480714</p>
+            <p className="text-normal">010-7348-0714</p>
           </div>
         </div>
         <div className="mt-12 grid grid-cols-2 gap-5">
-          <div className="bg-sub py-5 px-4 rounded-sm cursor-pointer text-main font-bold">
-            Portfolio
+          <div className="bg-sub py-5 px-4 rounded-sm cursor-pointer font-bold flex items-center gap-4">
+            <Lightbulb />
+            <span className="text-main">Portfolio</span>
           </div>
-          <div className="bg-normal py-5 px-4 rounded-sm cursor-pointer font-bold">
-            Github
+          <div
+            className="bg-normal py-5 px-4 rounded-sm cursor-pointer font-bold flex items-center gap-4"
+            onClick={util.Github}
+          >
+            <Github />
+            <span>Github</span>
           </div>
-          <div className="bg-normal py-5 px-4 rounded-sm cursor-pointer font-bold">
-            Medium
+          <div
+            className="bg-normal py-5 px-4 rounded-sm cursor-pointer font-bold flex items-center gap-4 "
+            onClick={util.Medium}
+          >
+            <Pen />
+            <span>Medium</span>
           </div>
-          <div className="bg-normal py-5 px-4 rounded-sm cursor-pointer font-bold">
-            LinkedIn
+          <div
+            className="bg-normal py-5 px-4 rounded-sm cursor-pointer font-bold flex items-center gap-4"
+            onClick={util.LinkendIn}
+          >
+            <LinkedIn />
+            <span>LinkedIn</span>
           </div>
         </div>
       </div>
@@ -240,12 +260,12 @@ const Resume = () => {
       <div className="mt-16">
         <p className="text-main text-3xl font-bold mb-5">Education</p>
         <div>
-          <div className="grid grid-flow-col">
+          <div className="grid grid-flow-col mb-10">
             <div className="w-56">
               <p className="text-normal">2022. 03 - </p>
             </div>
             <div>
-              <p className="text-grey font-bold mb-2">한국방송통신대학교</p>
+              <p className="text-grey font-bold mb-2">방송통신대학교</p>
               <p className="text-normal leading-6">컴퓨터과학과</p>
             </div>
           </div>
