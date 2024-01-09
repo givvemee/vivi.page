@@ -8,6 +8,10 @@ import { Pen } from '../icon/pen';
 import { MelhoProject, MelhoStack, OnuiiProject, OnuiiStack } from './list';
 
 const Resume = () => {
+  const openPortfolio = () => {
+    window.open('https://vivi-page.vercel.app/portfolio', '_blank');
+  };
+
   return (
     <div className="w-full max-w-3xl border-white mx-auto my-10">
       <p className="text-5xl font-800 mt-3 mb-3">Gibbeum Yoon</p>
@@ -50,7 +54,10 @@ const Resume = () => {
           </div>
         </div>
         <div className="mt-12 grid grid-cols-2 gap-5">
-          <div className="bg-sub py-5 px-4 rounded-sm cursor-pointer font-bold flex items-center gap-4">
+          <div
+            className="bg-sub py-5 px-4 rounded-sm cursor-pointer font-bold flex items-center gap-4"
+            onClick={openPortfolio}
+          >
             <Lightbulb />
             <span className="text-main">Portfolio</span>
           </div>
