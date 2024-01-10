@@ -23,7 +23,7 @@ const config: Config = {
       semiblack: '#37352F',
       grey: '#CCC',
       white: '#FFF',
-      black: '#000',
+      black: '#121212',
     },
 
     listStyleType: {
