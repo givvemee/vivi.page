@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <div
       className={` ${pathname === '/' ? 'hidden' : ''} ${
-        pathname.includes('resume') ? 'w-full max-w-3xl' : 'w-full max-w-5xl'
+        pathname.includes('resume') ? 'w-full max-w-4xl' : 'w-full max-w-5xl'
       } mx-auto py-5 text-main font-bold text-xl cursor-pointer sticky top-0 bg-white dark:bg-black flex items-center justify-between`}
     >
       {pathname !== '/' && (
