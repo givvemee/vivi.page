@@ -21,7 +21,7 @@ const config: Config = {
       normal: '#787774',
       subnormal: '#F1F1EF',
       semiblack: '#37352F',
-      grey: '#CCC',
+      grey: '#EEE',
       white: '#FFF',
       black: '#121212',
     },
