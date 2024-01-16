@@ -5,19 +5,19 @@ import Link from 'next/link';
 import { CodeBlock } from 'react-code-blocks';
 import { Email } from '../icon/email';
 import { Github } from '../icon/github';
+import { LinkTo } from '../icon/link';
 import { Pen } from '../icon/pen';
 import { MelhoStack, OnuiiStack } from '../resume/list';
 import * as code from './codeblocks';
-import { ChatLink, ChatStack, HangbookLink, HangbookStack } from './list';
 
 const Portfolio = () => {
   return (
     <div className="w-full max-w-5xl border-white mx-auto my-10">
-      <p className="text-3xl font-800 mt-3 mb-3">
-        윤기쁨 | 웹 프론트엔드 개발자 포트폴리오
+      <p className="text-3xl font-bold mt-3 mb-3">
+        프론트엔드 엔지니어 윤기쁨의 포트폴리오
       </p>
       <div className="flex gap-10">
-        <p className="text-normal leading-5 text-sm">
+        {/* <p className="text-normal leading-5 text-sm">
           <br />웹 퍼블리셔로 스타트업에서 개발 커리어를 시작한 웹 프론트엔드
           개발자입니다. React 및 Next.js 를 이용한 Javascript, Typescript 언어
           개발에 익숙하지만 언제나 새로운 기술에 대한 욕심을 가지고 있습니다.
@@ -26,21 +26,30 @@ const Portfolio = () => {
           기록하고, 새로이 적용할 수 있는 방법을 끊임없이 고민합니다. 보다
           효율적이고 유연한 컴포넌트에 대해 꾸준히 탐구하며 여러 번 시행착오를
           거치더라도 능동적으로 해답을 강구합니다.
-        </p>
-        <div>
+        </p> */}
+        <div className="w-full">
           <p className="text-main font-bold py-1">Contact Info</p>
-          <div className="flex flex-col gap-1.5">
-            <div onClick={util.SendEmail} className="flex gap-2 items-center">
+          <div className="flex gap-1.5 justify-between">
+            <div
+              onClick={util.SendEmail}
+              className="flex gap-2 items-center cursor-pointer"
+            >
               <Email />
-              <span>mail: givvemeee@gmail.com</span>
+              <span className="text-normal">givvemeee@gmail.com</span>
             </div>
-            <div onClick={util.Github} className="flex gap-2 items-center">
+            <div
+              onClick={util.Github}
+              className="flex gap-2 items-center cursor-pointer"
+            >
               <Github />
-              <span> https://github.com/givvemee</span>
+              <span className="text-normal">https://github.com/givvemee</span>
             </div>
-            <div onClick={util.Medium} className="flex gap-2 items-center">
+            <div
+              onClick={util.Medium}
+              className="flex gap-2 items-center cursor-pointer"
+            >
               <Pen />
-              <span>https://medium.com/@givvemeee</span>
+              <span className="text-normal">https://medium.com/@givvemeee</span>
             </div>
           </div>
         </div>
@@ -77,7 +86,7 @@ const Portfolio = () => {
               </p>
             </div>
             <div>
-              <p className="mt-2">내용</p>
+              <p className="mt-2">내용 </p>
               <ul className="list-disc list-inside pl-4 text-sm leading-6">
                 <li>
                   중고등 성적 및 대학 입결 입시 데이터를 기반으로 기준 데이터
@@ -139,7 +148,10 @@ const Portfolio = () => {
                         target={'_blank'}
                         className="underline"
                       >
-                        <span className="text-grey">오픈 소스 기여</span>
+                        <div className="inline-flex items-center gap-1 underline text-main">
+                          <LinkTo />
+                          <span>오픈 소스 기여</span>
+                        </div>
                       </Link>
                     </li>
                     <li>
@@ -194,9 +206,9 @@ const Portfolio = () => {
                 <li>
                   여러 페이지에서 사용될 Button, Input, Modal, Table, Loading
                   등을 공통 컴포넌트로 작성하여 재사용
-                  <ul className="pl-4 list-[square] list-inside text-normal leading-6">
+                  {/* <ul className="pl-4 list-[square] list-inside text-normal leading-6">
                     <li>해당 컴포넌트 storybook 작성</li>
-                  </ul>
+                  </ul> */}
                 </li>
                 <li>
                   결제 및 환불, 배송지 변경을 위한 페이지 작성
@@ -238,8 +250,8 @@ const Portfolio = () => {
                 <div className="w-1/2">
                   <ul className="list-disc list-inside pl-4 text-sm leading-7">
                     <li>
-                      통신마다 발생할 수 있는 에러 핸들링을 위해 백엔드와
-                      협업하여 에러를 코드로 분류함.
+                      데이터 송수신 시 에러 핸들링을 위해 백엔드와 협업하여
+                      에러를 코드로 분류함.
                       <ul className="pl-4 list-[square] list-inside text-normal leading-6">
                         <li>
                           클라이언트에서도 활용할 수 있도록 apollo 구성 내부에
@@ -264,9 +276,10 @@ const Portfolio = () => {
                             target={'_blank'}
                             className="underline"
                           >
-                            <span className="text-grey">
-                              (블로그 링크 참고)
-                            </span>
+                            <div className="inline-flex items-center gap-1 underline text-main">
+                              <LinkTo />
+                              <span>블로그 링크</span>
+                            </div>
                           </Link>
                         </li>
                       </ul>
@@ -301,17 +314,13 @@ const Portfolio = () => {
               <p className=" mt-2">개발</p>
               <ul className="list-disc list-inside pl-4 text-sm leading-6">
                 <li>
-                  결제 데이터 테이블 구현
+                  결제 데이터 테이블 구현과 결제 상세 페이지 개발 및 환불 기능
+                  추가
                   <ul className="pl-4 list-[square] list-inside text-normal leading-6">
                     <li>
                       기존에 작성해 두었던 공통 컴포넌트를 활용하여 UI 개발
                       기간을 스프린트 절반으로 단축{' '}
                     </li>
-                  </ul>
-                </li>
-                <li>
-                  결제 상세 페이지 개발 및 환불 기능 추가
-                  <ul className="pl-4 list-[square] list-inside text-normal leading-6">
                     <li>
                       내부 사용자가 기록할 금액, 환불 사유, 메모 등에 오차가
                       없도록 매 input 에 유효한 값이 들어갈 수 있도록 validation
@@ -319,6 +328,7 @@ const Portfolio = () => {
                     </li>
                   </ul>
                 </li>
+
                 <li>가상계좌 발급대기 연관 인증 번호 발송 및 취소 기능 개발</li>
                 <li>일부 페이지 Next 13 버전으로 마이그레이션 </li>
               </ul>
@@ -327,9 +337,9 @@ const Portfolio = () => {
                 <div className="w-1/2">
                   <ul className="list-disc list-inside pl-4 text-sm leading-6">
                     <li>
-                      mutaion 통신 직후 업데이트 된 해당 값을 페인팅 하기 위해
-                      query 를 호출하고, 이 과정에서 불필요하게 일어나는 화면
-                      새로고침 개선
+                      GraphQL mutaion 통신 직후 업데이트 된 해당 값을 페인팅
+                      하기 위해 query 를 호출하고, 이 과정에서 불필요하게
+                      일어나는 화면 새로고침 개선
                       <ul className="pl-4 list-[square] list-inside text-normal leading-6">
                         <li>
                           mutation 에 보내는 값이 query 의 특정 key의 value 인
@@ -352,9 +362,10 @@ const Portfolio = () => {
                             }
                             target={'_blank'}
                           >
-                            <span className="text-grey underline">
-                              (블로그 링크 참고)
-                            </span>
+                            <div className="inline-flex items-center gap-1 underline text-main">
+                              <LinkTo />
+                              <span>블로그 링크</span>
+                            </div>
                           </Link>
                         </li>
                       </ul>
@@ -385,11 +396,11 @@ const Portfolio = () => {
           <div className="my-5">
             <div className="bg-sub my-3">
               <p className="text-normal py-0.5 pl-2 font-bold mb-2">
-                기타 프로젝트
+                기타 사내 제품 개선
               </p>
             </div>
             <div>
-              <p className="underline py-1">
+              <p className="underline py-1 font-bold">
                 seoltab.com 웹 랜딩 페이지 개발 및 유지 보수{' '}
               </p>
               <div>
@@ -440,7 +451,7 @@ const Portfolio = () => {
               </div>
             </div>
             <div className="mt-3">
-              <p className="underline py-1">
+              <p className="underline py-1 font-bold">
                 코드 작성 안정화 구축 및 배포 환경 개선
               </p>
               <div>
@@ -454,13 +465,8 @@ const Portfolio = () => {
                 <p className="mt-2">개발</p>
                 <ul className="list-disc list-inside pl-4 text-sm leading-6">
                   <li>
-                    스터디 차원에서 작성하던 테스트 코드를 실제 프로젝트에 적용
-                    <ul className="pl-4 list-[square] list-inside text-normal leading-6">
-                      <li>
-                        내부에서 발생하는 오류를 최소화하기 위해 기본적인 렌더
-                        테스트부터 e2e 테스트 코드를 작성
-                      </li>
-                    </ul>
+                    내부에서 발생하는 오류를 최소화하기 위해 기본적인 렌더
+                    테스트부터 e2e 테스트 코드를 작성
                   </li>
                   <li>
                     AWS 를 이용하여 배포하던 시스템에서 비용 단축 및 테스트
@@ -471,7 +477,7 @@ const Portfolio = () => {
               </div>
             </div>
             <div className="mt-3">
-              <p className="underline py-1">
+              <p className="underline py-1 font-bold">
                 업무에 필요한 기술 고민 및 아이데이션과 프론트엔드 파트 내 업무
                 규약 확립, 코드 관리 도입
               </p>
@@ -483,9 +489,9 @@ const Portfolio = () => {
                 <p className="mt-2">개발</p>
                 <ul className="list-disc list-inside pl-4 text-sm leading-6">
                   <li>
-                    모든 레포에 동일하게 사용될 수 있는 tsconfig rule 세팅
+                    모든 레포에 동일하게 사용될 수 있는 tsconfig rule 세팅과
+                    패키지로 구성하여 관리하는 eslint config 개발
                   </li>
-                  <li>패키지로 구성하여 관리하는 eslint config 개발</li>
                   <li>
                     클라이언트에서 사용하는 통신의 에러 바운더리 관리 등을 확립
                   </li>
@@ -635,7 +641,7 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
-      <div className="mt-40">
+      {/* <div className="mt-40">
         <p className="text-main text-3xl font-bold mb-5">Toy Project</p>
         <div className="flex gap-12">
           <div className="flex flex-col ">
@@ -762,7 +768,7 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
