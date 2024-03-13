@@ -202,6 +202,21 @@ const Resume = () => {
         </div>
       </div>
       <div className="bg-grey my-16 h-px" />
+      <div className="mt-16">
+        <p className="text-main text-2xl font-bold mb-5">Other Experience</p>
+        <div>
+          <div className="grid grid-cols-2 mb-5">
+            <div className="">
+              <p className="text-normal">2024.03 - Now</p>
+            </div>
+            <div>
+              <p className="mb-2 font-bold">항해 플러스 프론트엔드 1기</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-grey my-16 h-px" />
       <div className="mt-14">
         <p className="text-main text-2xl font-bold mb-5">Skills</p>
         <div className="mb-7">
